@@ -1,0 +1,1 @@
+select count(1) from public.festivo where fecha = :fecha
