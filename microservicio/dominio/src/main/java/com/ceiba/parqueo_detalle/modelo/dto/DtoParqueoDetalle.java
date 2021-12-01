@@ -1,12 +1,7 @@
 package com.ceiba.parqueo_detalle.modelo.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-
 import java.time.LocalDateTime;
 
-@Getter
-@AllArgsConstructor
 public class DtoParqueoDetalle {
     private Long id;
     private Long parqueoId;
@@ -14,4 +9,37 @@ public class DtoParqueoDetalle {
     private LocalDateTime fechaHoraFin;
     private Double valor;
     private Integer tarifaId;
+
+    public DtoParqueoDetalle(Long id, Long parqueoId, LocalDateTime fechaHoraInicio, LocalDateTime fechaHoraFin, Double valor, Integer tarifaId) {
+        this.id = id;
+        this.parqueoId = parqueoId;
+        this.fechaHoraInicio = fechaHoraInicio;
+        this.fechaHoraFin = fechaHoraFin;
+        this.valor = valor;
+        this.tarifaId = tarifaId;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public Long getParqueoId() {
+        return parqueoId;
+    }
+
+    public LocalDateTime getFechaHoraInicio() {
+        return fechaHoraInicio;
+    }
+
+    public LocalDateTime getFechaHoraFin() {
+        return fechaHoraFin;
+    }
+
+    public Double getValor() {
+        return valor;
+    }
+
+    public Integer getTarifaId() {
+        return tarifaId;
+    }
 }
