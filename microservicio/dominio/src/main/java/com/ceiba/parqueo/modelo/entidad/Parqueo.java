@@ -1,13 +1,11 @@
 package com.ceiba.parqueo.modelo.entidad;
 
 import com.ceiba.parqueo.modelo.enums.TipoVehiculo;
-import lombok.Getter;
 
 import java.time.LocalDateTime;
 
 import static com.ceiba.dominio.ValidadorArgumento.*;
 
-@Getter
 public class Parqueo {
 
     private static final String DEBE_INGRESAR_LA_PLACA = "Debe ingresar la placa";
@@ -46,5 +44,33 @@ public class Parqueo {
 
     public void setValor(Double valor) {
         this.valor = valor;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getPlaca() {
+        return placa;
+    }
+
+    public String getTipoVehiculo() {
+        return tipoVehiculo;
+    }
+
+    public LocalDateTime getFechaHoraIngreso() {
+        return fechaHoraIngreso;
+    }
+
+    public LocalDateTime getFechaHoraSalida() {
+        return fechaHoraSalida;
+    }
+
+    public Double getValor() {
+        return valor;
+    }
+
+    public String getObservacion() {
+        return observacion;
     }
 }
