@@ -2,12 +2,10 @@ package com.ceiba.tarifa.modelo.entidad;
 
 import com.ceiba.parqueo.modelo.enums.TipoDia;
 import com.ceiba.parqueo.modelo.enums.TipoVehiculo;
-import lombok.Getter;
 
 import static com.ceiba.dominio.ValidadorArgumento.validarMenor;
 import static com.ceiba.dominio.ValidadorArgumento.validarValido;
 
-@Getter
 public class Tarifa {
 
     private static final String EL_VALOR_INGRESADO_DEBE_SER_MAYOR_A_CERO = "El valor ingresado debe ser mayor a cero";
@@ -32,5 +30,25 @@ public class Tarifa {
         this.tipoVehiculo = TipoVehiculo.valueOf(tipoVehiculo);
         this.tipoDia = TipoDia.valueOf(tipoDia);
         this.valor = valor;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public TipoVehiculo getTipoVehiculo() {
+        return tipoVehiculo;
+    }
+
+    public TipoDia getTipoDia() {
+        return tipoDia;
+    }
+
+    public Double getValor() {
+        return valor;
     }
 }

@@ -1,10 +1,7 @@
 package com.ceiba.festivo.modelo.entidad;
 
-import lombok.Getter;
-
 import java.time.LocalDate;
 
-@Getter
 public class Festivo {
     private final LocalDate fecha;
     private final String descripcion;
@@ -12,5 +9,13 @@ public class Festivo {
     public Festivo(LocalDate fecha, String descripcion) {
         this.fecha = fecha;
         this.descripcion = descripcion;
+    }
+
+    public LocalDate getFecha() {
+        return fecha;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
     }
 }
