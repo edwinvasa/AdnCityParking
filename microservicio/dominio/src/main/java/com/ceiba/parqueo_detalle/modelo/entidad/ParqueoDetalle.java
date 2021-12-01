@@ -1,13 +1,10 @@
 package com.ceiba.parqueo_detalle.modelo.entidad;
 
-import lombok.Getter;
-
 import java.time.LocalDateTime;
 
 import static com.ceiba.dominio.ValidadorArgumento.validarMenor;
 import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;
 
-@Getter
 public class ParqueoDetalle {
 
     private static final String DEBE_INGRESAR_EL_PARQUEO = "Debe ingresar el parqueo";
@@ -44,5 +41,29 @@ public class ParqueoDetalle {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public Long getParqueoId() {
+        return parqueoId;
+    }
+
+    public LocalDateTime getFechaHoraInicio() {
+        return fechaHoraInicio;
+    }
+
+    public LocalDateTime getFechaHoraFin() {
+        return fechaHoraFin;
+    }
+
+    public Double getValor() {
+        return valor;
+    }
+
+    public Integer getTarifaId() {
+        return tarifaId;
     }
 }
